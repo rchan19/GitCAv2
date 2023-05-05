@@ -67,11 +67,11 @@ jobs:
                     },
                     {
                       "type": "mrkdwn",
-                      "text": "*Repository:*\nAll vowel keys aren't working."
+                      "text": "*Repository:*\n ${{ secrets.GIT_URL }}"
                     },
                     {
                       "type": "plain_text",
-                      "text": "S "
+                      "text": "${{ secrets.RAILWAY_URL }} "
                     }
                   ]
                 }
