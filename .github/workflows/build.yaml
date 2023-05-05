@@ -77,7 +77,7 @@ jobs:
                       "text": "*Repository:*\n ${{ secrets.GIT_URL }}"
                     },
                     {
-                      "type": "plain_text",
+                      "type": "mrkdwn",
                       "text": "${{ secrets.RAILWAY_URL }} "
                     }
                   ]
