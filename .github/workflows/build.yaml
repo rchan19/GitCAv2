@@ -2,7 +2,11 @@ name: Deploy to Railway
 
 on:
   push:
-    branches: [main]
+    branches:
+    - main
+    - 'release/v*'
+    - '!release/v0.*'
+    - '!feature-01'
 
 jobs:
   deploy:
@@ -37,14 +41,39 @@ jobs:
         # For posting a rich message using Block Kit
           payload: |
             {
-              "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}",
               "blocks": [
                 {
-                  "type": "section",
+                  "type": "header",
                   "text": {
-                    "type": "mrkdwn",
-                    "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
+                    "type": "plain_text",
+                    "text": "DipSA 56 CI/CD Submission",
+                    "emoji": true
                   }
+                },
+                {
+                  "type": "section",
+                  "fields": [
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Name:* Reinardus Channing"
+                    },
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Email:* E0941679@u.nus.edu"
+                    },
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Matriculation:* A0249486L"
+                    },
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Repository:*\nAll vowel keys aren't working."
+                    },
+                    {
+                      "type": "plain_text",
+                      "text": "S "
+                    }
+                  ]
                 }
               ]
             }
