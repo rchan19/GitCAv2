@@ -8,7 +8,7 @@ on:
     - '!release/v0.1-*'
     - '!feature-01'
     
-#final
+#test-submission
 jobs:
   deploy:
     runs-on: ubuntu-latest
