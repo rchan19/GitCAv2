@@ -1,16 +1,16 @@
 name: Deploy to Railway
-#test norunn2
+
 on:
   push:
     branches:
-    # - main
-    # - 'release/v*'
-    # - '!release/v0.*'
-    # - '!release/beta'
-    # - '!feature-01'
-    # - '!v0.*'
     
-#com aaaaa
+    - 'release/v*'
+    - '!release/v0.*'
+    - '!release/beta'
+    - '!feature-01'
+    - '!v0.*'
+    
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -42,7 +42,7 @@ jobs:
         id: slack
         uses: slackapi/slack-github-action@v1.23.0
         with:
-        # For posting a rich message using Block Kit
+        
           payload: |
             {
               "blocks": [
