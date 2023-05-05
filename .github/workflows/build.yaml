@@ -3,15 +3,14 @@ name: Deploy to Railway
 on:
   push:
     branches:
-    - main
+    - 'release/*'
+    tags:
     - 'v*'
-    - 'release/v*'
-    - '!release/v0.*'
-    - '!release/beta'
-    - '!feature-01'
+    - '!beta'
     - '!v0.*'
+    - '!feature-01'
     
-#release v0.1
+#release v5.0
 jobs:
   deploy:
     runs-on: ubuntu-latest
