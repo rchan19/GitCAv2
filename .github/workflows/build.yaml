@@ -3,6 +3,8 @@ name: Deploy to Railway
 on:
   push:
     branches:
+    - 'v*'
+    - 'release/v*'
     - '!release/v0.*'
     - '!release/beta'
     - '!feature-01'
