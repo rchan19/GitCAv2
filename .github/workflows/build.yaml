@@ -1,5 +1,5 @@
 name: Deploy to Railway
-#test norun
+#test norunn
 on:
   push:
     branches:
@@ -13,9 +13,8 @@ on:
 #com aaaaa
 jobs:
   deploy:
-    if: "github.event.head_commit.message !=~ /#NORUN/"
     runs-on: ubuntu-latest
-    
+    if: "!contains(github.event.head_commit.message, '#NORUN')"
 
     steps:
       - name: Checkout
