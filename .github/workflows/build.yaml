@@ -1,17 +1,17 @@
 name: Deploy to Railway
-#test version v1.0
+#test version norun
 on:
   push:
     branches:
-    - main
-    - 'release/v*'
-    - '!release/v0.*'
-    - '!release/beta'
-    - '!feature-01'
-    - '!v0.*'
+    # - main
+    # - 'release/v*'
+    # - '!release/v0.*'
+    # - '!release/beta'
+    # - '!feature-01'
+    # - '!v0.*'
     if: "github.event.head_commit.message !=~ /#NORUN/"
 
-    tags:
+    
     
 
 
