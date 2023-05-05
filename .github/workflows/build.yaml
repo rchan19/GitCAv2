@@ -11,7 +11,7 @@ on:
     - '!feature-01'
     - '!v0.*'
     
-#11234
+#release v0.1
 jobs:
   deploy:
     runs-on: ubuntu-latest
