@@ -10,7 +10,7 @@ on:
     - '!v0.*'
     - '!feature-01'
     
-#release v5.0
+#final
 jobs:
   deploy:
     runs-on: ubuntu-latest
