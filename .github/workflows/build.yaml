@@ -1,5 +1,5 @@
 name: Deploy to Railway
-#test version norun
+#test norun
 on:
   push:
     branches:
@@ -9,7 +9,7 @@ on:
     # - '!release/beta'
     # - '!feature-01'
     # - '!v0.*'
-    if: "github.event.head_commit.message !=~ /#NORUN/"
+    
 
     
     
@@ -18,6 +18,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    if: "github.event.head_commit.message !=~ /#NORUN/"
 
     steps:
       - name: Checkout
